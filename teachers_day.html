@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HAPPY TEACHER'S DAY</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: linear-gradient(to right, #5d9bf8, #030a56);
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+    .card {
+      margin: 100px auto;
+      padding: 40px;
+      background: rgba(0,0,0,0.5);
+      border-radius: 15px;
+      width: 60%;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.5em;
+    }
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1em;
+      border: none;
+      border-radius: 8px;
+      background: #fff;
+      color: #ff4e50;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #f9d423;
+      color: #000;
+    }
+    #surprise {
+      display: none; 
+      margin: 20px auto;
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>🌸 Happy Teacher's Day 🌸</h2>
+    <h3>Chotim Aristanti S.Kom</h3>
+    <img id="surprise" src="chotim.jpg" alt="Teacher's Day Surprise" width="300" height="auto">
+    <p id="message">Dear Teacher, thank you for inspiring us every day!</p>
+    <button onclick="changeMessage()">Click for a Surprise</button>
+  </div>
+
+  <script>
+    const messages = [
+      "You are the guiding light in our journey of learning.",
+      "Your patience and wisdom make all the difference.",
+      "We are grateful for your endless dedication.",
+      "Teachers like you shape the future 🌟"
+    ];
+    let index = 0;
+
+    function changeMessage() {
+      document.getElementById("message").innerText = messages[index];
+      index = (index + 1) % messages.length;
+
+      document.getElementById("surprise").style.display = "block";
+    }
+  </script>
+</body>
+</html>
